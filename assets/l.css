@@ -1,0 +1,325 @@
+/*
+ * HTML5 ? Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+
+/* =============================================================================
+   HTML5 element display
+   ========================================================================== */
+
+footer { display: block; }
+
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+
+/*
+ * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
+ *    http://clagnut.com/blog/348/#c790
+ * 2. Force vertical scrollbar in non-IE
+ * 3. Remove Android and iOS tap highlight color to prevent entire container being highlighted
+ *    www.yuiblog.com/blog/2010/10/01/quick-tip-customizing-the-mobile-safari-tap-highlight-color/
+ * 4. Prevent iOS text size adjust on device orientation change, without disabling user zoom
+ *    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+ */
+
+html { font-size: 100%; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+body { margin: 0; font-size: 13px; line-height: 1.231; }
+
+body, button, input, textarea { font-family: sans-serif; color: #222; }
+
+/*
+ * These selection declarations have to be separate
+ * No text-shadow: twitter.com/miketaylr/status/12228805301
+ * Also: hot pink!
+ */
+
+::-moz-selection { background: #558ed5; color: #fff; text-shadow: none; }
+::selection { background: #558ed5; color: #fff; text-shadow: none; }
+
+
+/* =============================================================================
+   Links
+   ========================================================================== */
+
+a, a:visited { color: #558ed5; }
+a:focus { outline: thin dotted; }
+
+/* Improve readability when focused and hovered in all browsers: people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active { outline: 0; background: #558ed5; color: #fff; text-shadow: 0 0 0;}
+
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+
+/*
+ * 1. Correct font-size not inheriting in all browsers
+ * 2. Remove margins in FF3/4 S5 Chrome
+ * 3. Define consistent vertical alignment display in all browsers
+ */
+
+button, input, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+
+/*
+ * 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
+ * 2. Correct inner spacing displayed oddly in IE6/7
+ */
+
+button, input { line-height: normal; *overflow: visible; }
+
+/*
+ * 1. Display hand cursor for clickable form elements
+ * 2. Allow styling of clickable form elements in iOS
+ */
+
+button { cursor: pointer; -webkit-appearance: button; }
+
+/*
+ * Consistent box sizing and appearance
+ */
+
+input[type="checkbox"]{ box-sizing: border-box; }
+
+/*
+ * Remove inner padding and border in FF3/4
+ * www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
+ */
+
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+/* Remove default vertical scrollbar in IE6/7/8/9 */
+textarea { overflow: auto; vertical-align: top; }
+
+
+/* =============================================================================
+   Primary styles
+   Author: Neofyt
+   ========================================================================== */
+body {
+	font: 12px Trebuchet, Sans-Serif;
+	line-height: 24px;
+	background: #fafafa;
+	color: #656565;
+	text-shadow: white 1px 1px 1px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.h .blue {
+    color: #558ed5;
+}
+
+header {
+    height: 100px;
+    width: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -100px;
+    text-align: left;
+}
+
+    header h1 {
+        margin-bottom: 15px;
+        padding: 0;
+    }
+
+    header p, header span {
+        font-style: oblique;
+    }
+
+.tooltip {
+	font-weight: bold;
+	color: #558ed5;
+	cursor: help;
+	position: relative;
+}
+
+.tooltip:hover::after {
+	font-weight: normal;
+	content: attr(data-tip);
+	text-align: center;
+	text-shadow: 0 0 0;
+	width: 300px;
+	background: #558ed5;
+	color: #fff;
+	position: absolute;
+	top: 22px;
+	left: -150px;
+	padding: 2px 3px;
+	-o-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 80%;
+	margin: 10% auto;
+	padding-bottom: 30px;
+}
+
+[type="checkbox"] {
+	display: none;
+}
+
+[type="checkbox"] + label, button {
+	height: 30px;
+	padding: 4px 0;
+	line-height: 30px;
+	text-shadow: none;
+	cursor: pointer;
+	width: 100%;
+	border-radius: 5px;
+	color: #558ed5;
+	border: solid 1px #ccc;
+	display: block;
+	font-size: 18px;
+	background: #fff;
+	box-shadow: 0 0 5px #ddd;
+	text-indent: 10px;
+}
+
+	[type="checkbox"] + label:active, button:active {
+		-webkit-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0px inset;
+		-moz-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 3px 0px inset;
+	}
+
+	[type="checkbox"] + label:hover, button:hover {
+		color: #fff;
+		border-color: #558ed5;
+		background-color: #558ed5;
+	}
+
+	[type="checkbox"]:checked + label {
+		color: #fff;
+		border-color: #558ed5;
+		background-color: #558ed5;
+}
+
+li:nth-child(n+2):before {
+	content: "+";
+	font-size: 20px;
+	position: relative;
+	left: -5%;
+	top: 35px;
+}
+
+label span {
+	font-size: 12px;
+	font-style: italic;
+}
+
+textarea {
+	width: 90%;
+    margin: 0 auto;
+	height: 300px;
+	display: none;
+	border: solid 10px #558ed5;
+	border-top: 0;
+	padding: 10px;
+	border-radius: 0 0 5px 5px;
+	resize: none;
+}
+
+[type="checkbox"]:checked + label ~ textarea {
+	display: block;
+}
+
+textarea:focus {
+	outline: none;
+}
+
+button {
+	height: 40px;
+	margin: 30px 0;
+}
+
+a {
+    text-decoration: none;
+    color: #558ed5;
+    font-style: normal;
+}
+
+noscript {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	color: red;
+	z-index: 100;
+	text-align: center;
+	padding-top: 200px;
+	background: #fafafa;
+	font-size: 30px;
+}
+
+footer {
+	left: 0;
+	right: 0;
+	height: 22px;
+	bottom: 0;
+	text-align: center;
+	font-style: oblique;
+	position: fixed;
+}
+
+/*********************************************
+**************** WEBKIT *******************
+*********************************************/
+/*      Beginning of scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+    display:none;
+    height: 10px;
+}
+
+::-webkit-scrollbar-button:vertical:increment {
+    background-color: #558ed5;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    height: 50px;
+    background-color: #558ed5;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+    width: 50px;
+    background-color: #558ed5;
+}
+/*      End of scrollbar */
+
+
+/* =============================================================================
+   Non-semantic helper classes
+   Please define your styles before this section.
+   ========================================================================== */
+
+/* Contain floats: nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
